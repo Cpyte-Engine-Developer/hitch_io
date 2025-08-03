@@ -1,9 +1,10 @@
 import flet as ft
+from navigation_bar import NavigationBar
 
 
 def main(page: ft.Page):
     page.title = "Hitch.io"
-    page.navigation_bar = ft.NavigationBar(
+    page.navigation_bar = NavigationBar(
         destinations=(
             ft.NavigationBarDestination(icon=ft.Icons.WEB, label="Games"),
             ft.NavigationBarDestination(icon=ft.Icons.LIBRARY_BOOKS, label="Library"),
@@ -11,7 +12,7 @@ def main(page: ft.Page):
             ft.NavigationBarDestination(icon=ft.Icons.SETTINGS, label="Settings")
         )
     )
-    page.add(ft.Text("Body!"))
+    page.update()
 
 
 ft.app(main)
