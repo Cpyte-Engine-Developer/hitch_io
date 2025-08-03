@@ -3,6 +3,7 @@ from navigation_bar import NavigationBar
 from games_container import GamesContainer
 from library_container import LibraryContainer
 from updates_container import UpdatesContainer
+from settings_container import SettingsContainer
 
 
 def main(page: ft.Page):
@@ -11,10 +12,7 @@ def main(page: ft.Page):
     games_container = GamesContainer()
     library_container = LibraryContainer()
     updates_container = UpdatesContainer()
-    settings_container = ft.Container(
-        ft.Text("Settings"),
-        alignment=ft.alignment.center,
-    )
+    settings_container = SettingsContainer()
 
     animated_switcher = ft.AnimatedSwitcher(
         games_container,
