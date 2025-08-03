@@ -1,29 +1,23 @@
 import flet as ft
 from navigation_bar import NavigationBar
+from games_container import GamesContainer
 
 
 def main(page: ft.Page):
     page.title = "Hitch.io"
 
-    games_container = ft.Container(
-        ft.Text("Games"),
-        alignment=ft.alignment.center,
-        key=0
-    )
+    games_container = GamesContainer()
     library_container = ft.Container(
         ft.Text("Library"),
         alignment=ft.alignment.center,
-        key=1
     )
     updates_container = ft.Container(
         ft.Text("Updates"),
         alignment=ft.alignment.center,
-        key=2
     )
     settings_container = ft.Container(
         ft.Text("Settings"),
         alignment=ft.alignment.center,
-        key=3
     )
 
     animated_switcher = ft.AnimatedSwitcher(
